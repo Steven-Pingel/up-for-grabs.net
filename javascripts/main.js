@@ -43,9 +43,7 @@
       if (gh && !count.length){
         count = $('<span class="count"><img src="images/octocat-spinner-32.gif" /></span>').appendTo(this);
         $.ajax({
-          dataType: "json",
           url: url,
-          data: data,
           success: function(data, textStatus, jqXHR){
             var rateLimitRemaining = jqXHR.getResponseHeader('X-RateLimit-Remaining'),
                 rateLimitReset = jqXHR.getResponseHeader('X-RateLimit-Reset');
