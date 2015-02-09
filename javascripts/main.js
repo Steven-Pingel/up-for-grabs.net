@@ -35,7 +35,7 @@
   });
 
   $(function() {
-    $('.label a').on("mouseenter focus mouseleave", function(){
+    $(document).on("mouseenter focus mouseleave", '.label a', function(){
       var gh = this.href.match(/github.com(\/[^\/]+\/[^\/]+\/)labels\/([^\/]+)$/)
         , url = gh && ('https://api.github.com/repos' + gh[1] + 'issues?labels=' + gh[2])
         , count = $(this).find('.count');
