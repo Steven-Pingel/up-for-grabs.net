@@ -69,7 +69,7 @@
             , docViewBottom = docViewTop + $window.height()
             , elemTop = $elem.offset().top
             , elemBottom = elemTop + $elem.height();
-          return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+          return ((elemTop <= docViewBottom) || (elemBottom >= docViewTop));
         };
 
     $window.on('scroll', function() {
