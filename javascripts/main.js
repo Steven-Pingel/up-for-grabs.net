@@ -69,7 +69,6 @@
             , docViewBottom = docViewTop + $window.height()
             , elemTop = $elem.offset().top
             , elemBottom = elemTop + $elem.height();
-          console.log("W: %i–%i; E: %i–%i", docViewTop, docViewBottom, elemTop, elemBottom);
           return (docViewTop <= elemTop && elemTop <= docViewBottom) ||
                  (docViewTop <= elemBottom && elemBottom <= docViewBottom);
         };
